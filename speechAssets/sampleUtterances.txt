@@ -1,0 +1,25 @@
+SuggestionIntent can I have a suggestion for a {SuggestionType}
+SuggestionIntent can I have a suggestion for an {SuggestionType}
+SuggestionIntent can I get a suggestion for a {SuggestionType}
+SuggestionIntent can I get a suggestion for an {SuggestionType}
+SuggestionIntent can I have a {SuggestionType}
+SuggestionIntent can I have an {SuggestionType}
+SuggestionIntent can I get a {SuggestionType}
+SuggestionIntent can I get an {SuggestionType}
+SuggestionIntent to get a suggestion for a {SuggestionType}
+SuggestionIntent to get a suggestion for an {SuggestionType}
+SuggestionIntent for a {SuggestionType}
+SuggestionIntent for an {SuggestionType}
+SuggestionIntent to get a {SuggestionType}
+SuggestionIntent to get an {SuggestionType}
+
+SuggestionIntent what is a {SuggestionType}
+SuggestionIntent what is an {SuggestionType}
+SuggestionIntent what's a {SuggestionType}
+SuggestionIntent what's an {SuggestionType}
+SuggestionIntent give me a {SuggestionType}
+SuggestionIntent give me an {SuggestionType}
+SuggestionIntent {SuggestionType}
+
+SuggestionIntent can I get a suggestion
+SuggestionIntent can I have a suggestion

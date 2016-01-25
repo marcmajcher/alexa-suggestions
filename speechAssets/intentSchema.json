@@ -1,0 +1,22 @@
+{
+  "intents": [
+    {
+      "intent": "SuggestionIntent",
+      "slots": [
+      {
+        "name" : "SuggestionType",
+        "type": "SUGGESTION_TYPES"
+      }
+     ]
+    },
+   {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}
