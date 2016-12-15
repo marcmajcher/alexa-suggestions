@@ -1,6 +1,6 @@
 'use strict';
 
- /* eslint-env node */
+/* eslint-env node */
 
 const AlexaSkill = require('./AlexaSkill');
 const suggestions = require('./suggestions.js');
@@ -22,7 +22,7 @@ ImprovSuggestions.prototype = Object.create(AlexaSkill.prototype);
 ImprovSuggestions.prototype.constructor = ImprovSuggestions;
 
 ImprovSuggestions.prototype.eventHandlers.onLaunch = (launchRequest, session, response) => {
-  const speechText = 'Welcome to the imrov suggestion giver. You can ask a question like, can I have a suggestion for a location, occupation, or relationship?';
+  const speechText = 'Welcome to the improv suggestifier. You can ask a question like, can I have a suggestion for a location, occupation, or relationship?';
   const repromptText = 'For instructions on what you can say, please say help me.';
   response.ask(speechText, repromptText);
 };
@@ -37,7 +37,9 @@ ImprovSuggestions.prototype.intentHandlers = {
 
     const cardTitle = `Suggestion for ${suggestionType}`;
     const suggestionList = suggestions[suggestionType];
-    const suggestion = suggestionList[Math.floor(Math.random() * suggestionList.length)];
+    const suggestion = suggestionList ?
+      suggestionList[Math.floor(Math.random() * suggestionList.length)] :
+      undefined;
     let speechOutput;
     let repromptOutput;
 
