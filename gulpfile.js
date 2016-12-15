@@ -9,10 +9,11 @@ const jshint = require('gulp-jshint');
 const zip = require('gulp-zip');
 
 const lintable = [
+  'gulpfile.js',
   'src/**/*.js'
 ];
 
-gulp.task('default', ['clean', 'eslint', 'jshint', 'build', 'watch']);
+gulp.task('default', ['eslint', 'jshint', 'clean', 'build']);
 gulp.task('lint', ['eslint', 'jshint', 'lwatch']);
 
 gulp.task('clean', () =>
@@ -26,7 +27,7 @@ gulp.task('eslint', () =>
   .pipe(eslint())
   .pipe(eslint.format())
   .on('error', (error) => {
-    console.error(error.toString());
+    console.error(error.toString()); // eslint-disable-line no-console
     this.emit('end');
   })
 );
@@ -44,14 +45,9 @@ gulp.task('build', () =>
 );
 
 gulp.task('watch', () =>
-  gulp.watch([
-    'src/**/*.js'
-  ], ['jshint', 'eslint', 'build'])
+  gulp.watch(lintable, ['jshint', 'eslint', 'build'])
 );
 
 gulp.task('lwatch', () =>
-  gulp.watch([
-    'gulpfile.js',
-    'src/**/*.js'
-  ], ['jshint', 'eslint'])
+  gulp.watch(lintable, ['jshint', 'eslint'])
 );
