@@ -4,6 +4,7 @@
 
 const AlexaSkill = require('./AlexaSkill');
 const suggestions = require('./suggestions.js');
+const outputPrefix = 'Your suggestion is';
 
 const APP_ID = 'amzn1.echo-sdk-ams.app.64192a57-0265-4d47-b130-ec637476758f';
 
@@ -45,7 +46,7 @@ ImprovSuggestions.prototype.intentHandlers = {
 
     if (suggestion) {
       speechOutput = {
-        speech: suggestion,
+        speech: `${outputPrefix} ${suggestion}`,
         type: AlexaSkill.speechOutputType.PLAIN_TEXT
       };
       response.tellWithCard(speechOutput, cardTitle, suggestion);
