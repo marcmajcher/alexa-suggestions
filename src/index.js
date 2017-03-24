@@ -23,7 +23,7 @@ ImprovSuggestions.prototype = Object.create(AlexaSkill.prototype);
 ImprovSuggestions.prototype.constructor = ImprovSuggestions;
 
 ImprovSuggestions.prototype.eventHandlers.onLaunch = (launchRequest, session, response) => {
-  const speechText = 'Welcome to the improv suggestifier. You can ask a question like, can I have a suggestion for a location, occupation, or relationship?';
+  const speechText = 'Welcome to the improv suggestifier. You can ask a question like, can I have a suggestion for a location, occupation, relationship, object, or word?';
   const repromptText = 'For instructions on what you can say, please say help me.';
   response.ask(speechText, repromptText);
 };
@@ -54,10 +54,10 @@ ImprovSuggestions.prototype.intentHandlers = {
     else {
       let speech;
       if (suggestionType) {
-        speech = `I'm sorry, I currently do not have any suggestions for ${suggestionType}. Try a location, occupation, or relationship.`;
+        speech = `I'm sorry, I currently do not have any suggestions for ${suggestionType}. Try a location, occupation, relationship, object, or word.`;
       }
       else {
-        speech = 'I\'m sorry, I need a type of suggestion. Try a location, occupation, or relationship.';
+        speech = 'I\'m sorry, I need a type of suggestion. Try a location, occupation, relationship, object, or word.';
       }
       speechOutput = {
         speech,
@@ -80,7 +80,7 @@ ImprovSuggestions.prototype.intentHandlers = {
   },
 
   'AMAZON.HelpIntent': (intent, session, response) => {
-    const speechText = 'You can ask for an improv suggestion, like a suggestion for a location, occupation, or relationship.';
+    const speechText = 'You can ask for an improv suggestion, like a suggestion for a location, occupation, relationship, object, or word.';
     const repromptText = 'You can say things like, can I have a suggestion for an occupation, can I get a relationship, or you can say exit... Now, what can I help you with?';
     const speechOutput = {
       speech: speechText,
