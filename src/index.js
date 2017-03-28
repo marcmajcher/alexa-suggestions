@@ -5,7 +5,7 @@
 const AlexaSkill = require('./AlexaSkill');
 const suggestions = require('./suggestions.js');
 const outputPrefix = 'Your suggestion is';
-
+const scores = [1, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5];
 const APP_ID = 'amzn1.echo-sdk-ams.app.64192a57-0265-4d47-b130-ec637476758f';
 
 /**
@@ -70,7 +70,10 @@ ImprovSuggestions.prototype.intentHandlers = {
       response.ask(speechOutput, repromptOutput);
     }
   },
-
+  ScoreIntent: (intent, session, response) => {
+    const score = scores[Math.floor(Math.random() * scores.length)];
+    response.tell(`That scene was a ${score}`);
+  },
   'AMAZON.StopIntent': (intent, session, response) => {
     response.tell('Goodbye');
   },

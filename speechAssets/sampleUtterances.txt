@@ -23,3 +23,10 @@ SuggestionIntent {SuggestionType}
 
 SuggestionIntent can I get a suggestion
 SuggestionIntent can I have a suggestion
+
+ScoreIntent score that scene
+ScoreIntent what was the score for that scene
+ScoreIntent what's that scene's score
+ScoreIntent what did that scene score
+ScoreIntent what is the score for that scene
+ScoreIntent can you score that scene

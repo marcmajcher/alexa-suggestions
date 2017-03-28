@@ -1,15 +1,15 @@
 {
-  "intents": [
-    {
+  "intents": [{
       "intent": "SuggestionIntent",
-      "slots": [
-      {
-        "name" : "SuggestionType",
+      "slots": [{
+        "name": "SuggestionType",
         "type": "SUGGESTION_TYPES"
-      }
-     ]
+      }]
     },
-   {
+    {
+      "intent": "ScoreIntent"
+    },
+    {
       "intent": "AMAZON.HelpIntent"
     },
     {
